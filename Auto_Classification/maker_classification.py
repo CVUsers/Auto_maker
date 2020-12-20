@@ -61,7 +61,7 @@ def main():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dtype', type=str, default='pause', help='your label')
-    parser.add_argument('--train_test', type=str, default='test', help='your label')
+    parser.add_argument('--train_test', type=str, default='test', help='train/test')
 
     args = parser.parse_args()
     main()

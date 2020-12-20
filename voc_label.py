@@ -4,6 +4,8 @@ import os
 import cv2
 import random
 classes = ['UsingPhone', 'LikePhone']
+
+
 def convert(size, box):
     print(size, box)
     dw = 1. / size[0]
@@ -37,24 +39,6 @@ def convert_annotation(image_id):
             print('*******************************'*2, cls)
             break
         cls_id = classes.index(cls)
-        if cls == 'A' or cls == 'E' or cls == 'M' or cls == 'N' or cls == 'S' or cls == 'T' or cls =='F':
-            cls_id = 0
-        if  cls == 'L' or cls =='U'  or cls == 'H':
-            cls_id = 1
-        if cls == 'Y':
-            cls_id = 2
-        if cls == 'I' or cls == 'J':
-            cls_id = 3
-        if cls == 'G' or cls == 'Q' or cls =='P':
-            cls_id = 4
-        if cls == 'O' or cls == 'C':
-            cls_id = 5
-        if cls == 'K' or cls == 'V' or cls == 'W':
-            cls_id = 6
-        if cls == 'X' or cls == 'Z' or cls == 'R' or cls == 'D':
-            cls_id = 7
-        if cls_id == 26 or cls == 'B':
-            cls_id =8
         xmlbox = obj.find('bndbox')
         b = (float(xmlbox.find('xmin').text), float(xmlbox.find('xmax').text), float(xmlbox.find('ymin').text),
              float(xmlbox.find('ymax').text))

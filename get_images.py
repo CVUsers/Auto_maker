@@ -183,6 +183,7 @@ def run_on_images(source, mix=False):
     intBB = None
     for i in os.listdir(source):
         frame = cv2.imread(os.path.join(source, i))
+        print(os.path.join(source, i))
         frame = cv2.resize(frame, (640, 480))
         frame = cv2.flip(frame, 3)
         frame1 = frame.copy()
@@ -231,7 +232,7 @@ if __name__ == '__main__':
     parser.add_argument('-i', '--source_path', type=str, default='0',
                         help='0 or 1 is your capture, or use video.mp4 or use path_dir like: ./images/')
     parser.add_argument('--show', default=True, action='store_true', help='mix_up picture show')
-    parser.add_argument('--mix', default=False, action='store_true',
+    parser.add_argument('--mix', default='./mix_img/', action='store_true',
                         help='default:False is do not use mix_up method, and use ./mix_up to mix_up')
     parser.add_argument('--Scaling_probability', default=[0.6, 1.4], action='store_true',
                         help='The probability of scaling your boxes')
