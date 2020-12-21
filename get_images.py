@@ -1,6 +1,8 @@
 """
 create by cv调包侠
 支持实时标注和视频标注和图片的文件夹标注
+github:https://github.com/CVUsers/Auto_maker 欢迎star~
+公众号在readme~欢迎加入社区.
 """
 import cv2
 from os import getcwd
@@ -227,6 +229,11 @@ def run_on_images(source, mix=False):
 
 
 if __name__ == '__main__':
+    """
+    cv调包侠
+    注意：为了更好的效果，您在开始使用后，先按下s键开始标注，按下b键开始保存，
+    期间如果有不准确的地方，您有几个机会去调整boxes：1 再按下s键，重新描框即可；2您可以通过test_img文件夹重新筛选删除图片。
+    """
     parser = argparse.ArgumentParser('Auto_maker')
     parser.add_argument('-t', "--tracker", type=str, default='csrt', help='choose opencv tracker methods')
     parser.add_argument('-i', '--source_path', type=str, default='0',
@@ -237,7 +244,7 @@ if __name__ == '__main__':
     parser.add_argument('--Scaling_probability', default=[0.6, 1.4], action='store_true',
                         help='The probability of scaling your boxes')
     classes_list = ['UsingPhone', 'LikePhone']  # 类别名称 不建议使用"_"命名
-    obj_name = classes_list[0]  # 此次标注的类别名称
+    obj_name = classes_list[0]  # 此次标注的类别名称（注意修改此处）
     args = parser.parse_args()
     counter, flag = 0, 0
     path = "images/"
