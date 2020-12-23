@@ -16,8 +16,9 @@ def get_roi(frame, x1, x2, y1, y2):
 def get_data(dtype):
     max = 0
     for i in os.listdir('data/{}/{}'.format(args.train_test, dtype)):
-        if int(i.split('_')[2].split('.')[0]) > max:
-            max = int(i.split('_')[2].split('.')[0])
+        print(i)
+        if int(i.split('.')[0]) > max:
+            max = int(i.split('.')[0])
 
     return max + 1
 
