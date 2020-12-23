@@ -12,7 +12,7 @@ from xml.etree import ElementTree as ET
 import numpy as np
 import argparse
 import random
-
+# pip install opencv-contrib-python
 
 # 定义一个创建一级分支object的函数
 def create_object(root, xi, yi, xa, ya, obj_name):  # 参数依次，树根，xmin，ymin，xmax，ymax
@@ -103,8 +103,8 @@ def saveROIImg(frame, img, xmin, ymin, xmax, ymax, obj_name, flag=False, mix=Fal
     global counter, saveimg
     name = find_max_name(obj_name, mix)
     H, W = frame.shape[0], frame.shape[-2]
-    name += 1
     if flag:
+        name += 1
         print("Saving image:", name, xmin, ymin, xmax, ymax)
         cv2.imwrite(path + f'mix_{obj_name}_' + str(name) + ".jpg", mix)
         cv2.rectangle(mix, (xmin, ymin), (xmax, ymax), (0, 255, 0), 2)
@@ -115,6 +115,7 @@ def saveROIImg(frame, img, xmin, ymin, xmax, ymax, obj_name, flag=False, mix=Fal
         tree = ET.ElementTree(annotation)
         tree.write('.\Annotations\{}.xml'.format(f'mix_{obj_name}_' + str(name)))
         return
+    name += 1
     print("Saving image:", name, xmin, ymin, xmax, ymax)
     cv2.imwrite(path + f'{obj_name}_' + str(name) + ".jpg", img)
     cv2.imwrite(test_path + f'{obj_name}_' + str(name) + ".jpg", frame)
