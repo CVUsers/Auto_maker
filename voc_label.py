@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 import os
 import cv2
 import random
-classes = ['UsingPhone', 'LikePhone']
+classes = ['UsingPhone', 'LikePhone']  # 请修改这里为你的类别
 
 
 def convert(size, box):
@@ -23,8 +23,8 @@ def convert(size, box):
 
 def convert_annotation(image_id):
     print(image_id)
-    in_file = open(r'./Annotations/%s' % (image_id), 'rb')  #  读取xml文件路径
-    out_file = open('./labels/%s.txt' % (image_id.split('.')[0]), 'w')  #  需要保存的txt格式文件路径
+    in_file = open(r'./Annotations/%s' % (image_id), 'rb')  # 读取xml文件路径
+    out_file = open('./labels/%s.txt' % (image_id.split('.')[0]), 'w')  # 需要保存的txt格式文件路径
     tree = ET.parse(in_file)
     root = tree.getroot()
     size = root.find('size')
@@ -36,7 +36,7 @@ def convert_annotation(image_id):
     for obj in root.iter('object'):
         cls = obj.find('name').text
         if cls not in classes:
-            print('*******************************'*2, cls)
+            print('该类别未在您的定义之中 error*******************************'*2, cls)
             break
         cls_id = classes.index(cls)
         xmlbox = obj.find('bndbox')
@@ -55,7 +55,7 @@ for image_id in image_ids_train:
 
 trainval_percent = 0.1  # 可自行进行调节
 train_percent = 1
-xmlfilepath = './labels'
+xmlfilepath = './labels' # txt保存地址
 total_xml = os.listdir(xmlfilepath)
 num = len(total_xml)
 list = range(num)
