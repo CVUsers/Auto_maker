@@ -1,5 +1,7 @@
 """
+cv调包侠
 爬虫爬取数据
+可以用于爬取你想要的目标数据或者是mix_up数据
 """
 import os
 import requests

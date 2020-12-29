@@ -1,0 +1,10 @@
+../images/UsingPhone_17.jpg
+../images/UsingPhone_20.jpg
+../images/UsingPhone_34.jpg
+../images/UsingPhone_42.jpg
+../images/UsingPhone_52.jpg
+../images/UsingPhone_62.jpg
+../images/UsingPhone_69.jpg
+../images/UsingPhone_79.jpg
+../images/UsingPhone_86.jpg
+../images/UsingPhone_96.jpg

@@ -291,7 +291,7 @@ def saveMutilImg(frame, img, xyxy, obj_name, flag=False, mix=False):
         create_object(annotation, mutils=xyxy, obj_name=obj_name)
         cv2.waitKey(20)
         tree = ET.ElementTree(annotation)
-        tree.write('.\Annotations\{}.xml'.format('mix_' + ''.join(obj_name) + '_'+ str(name)))
+        tree.write('.\Annotations\{}.xml'.format('mix_' + ''.join(obj_name) + '_' + str(name)))
         return
     name += 1
     print("Saving mutil_image:", ''.join(obj_name) + '_' + str(name), xyxy)
@@ -383,13 +383,13 @@ if __name__ == '__main__':
     parser.add_argument('-i', '--source_path', type=str, default='0',
                         help='0 or 1 is your capture, obbr use video.mp4 or use path_dir like: ./images/'
                              '0/1使用相机，图像文件夹路径和视频路径都可以')
-    parser.add_argument('--show', default=True, action='store_true', help='mix_up picture show, 展示')
-    parser.add_argument('--mix', default='./mix_img', action='store_true',
+    parser.add_argument('--show', default=True, help='mix_up picture show, 展示')
+    parser.add_argument('--mix', type=str, default=False,
                         help='default:False is do not use mix_up method, and use ./mix_img to mix_up, '
                              '默认为False 则会不使用mix_up数据增强策略~使用：./mix_img或其他图像路径去mixup')
     parser.add_argument('--Scaling_probability', default=[0.6, 1.4], action='store_true',
                         help='The probability of scaling your boxes,设置mix——up时的图像随机等比例缩放范围')
-    parser.add_argument('--multi_cls', default=True, action='store_true',
+    parser.add_argument('--multi_cls', default=True,
                         help='You can define how many trackers to start,设置为True则能够实时标注多目标')
     """
     cv调包侠 更行 2020.12.27 超参数使用说明（必看）
@@ -418,7 +418,8 @@ if __name__ == '__main__':
         run_on_video(args.source_path, mix=args.mix)
     elif ('0' in args.source_path or '1' in args.source_path) and not args.multi_cls:  # 实时标注(一个类别) （建议使用实际使用时的相机录制~）
         run_on_video(int(args.source_path), mix=args.mix)
-    elif ('0' in args.source_path or '1' in args.source_path or os.path.isfile(args.source_path)) and args.multi_cls:  # 实时标注(多个类别)
+    elif ('0' in args.source_path or '1' in args.source_path or os.path.isfile(
+            args.source_path)) and args.multi_cls:  # 实时标注(多个类别)
         if '0' in args.source_path or '1' in args.source_path:
             mutil_labels_video(int(args.source_path), mix=args.mix)
         elif os.path.isfile(args.source_path):
