@@ -8,7 +8,7 @@
 
 ### 目标检测模式
 
-![1608460483759](Auto_maker_readme\1.png)
+![1608460483759](Auto_maker_readme/1.png)
 
 在我们运行Auto_maker 前，需要安装opencv的库：opencv-contrib-python 库
 
@@ -46,7 +46,7 @@ python get_images.py  # 使用mix_up 模式一或多类别标注
 
 
 
-![1608466791841](Auto_maker_readme\demo1.png)
+![1608466791841](Auto_maker_readme/demo1.png)
 
  																	数据标注部分
 
@@ -54,21 +54,21 @@ python get_images.py  # 使用mix_up 模式一或多类别标注
 
 
 
-![1608467114587](Auto_maker_readme\demo2.png)
+![1608467114587](Auto_maker_readme/demo2.png)
 
 ​																				自动标注过程
 
 
 
-![1608467265739](Auto_maker_readme\4.png)
+![1608467265739](Auto_maker_readme/4.png)
 
 ​																							数据效果图	
 
-![1608467331409](Auto_maker_readme\5.png)
+![1608467331409](Auto_maker_readme/5.png)
 
 ​																				标注文件集
 
-![1608467378947](Auto_maker_readme\6.png)
+![1608467378947](Auto_maker_readme/6.png)
 
 ### 训练出来的目标检测模型演示
 
@@ -82,9 +82,9 @@ python get_images.py  # 使用mix_up 模式一或多类别标注
 
 模型已放在github上，轻量级模型，这两天会更新更高精度模型~
 
-![1608467536580](Auto_maker_readme\9.png)
+![1608467536580](Auto_maker_readme/9.png)
 
-![1608467558431](Auto_maker_readme\8.png)
+![1608467558431](Auto_maker_readme/8.png)
 
 
 
