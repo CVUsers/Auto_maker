@@ -22,7 +22,7 @@ github：https://github.com/CVUsers/Auto_maker
 
 ### 目标检测模式
 
-![1608460483759](Auto_maker_readme\1.png)
+![1608460483759](Auto_maker_readme/1.png)
 
 在我们运行Auto_maker 前，需要安装opencv的库：opencv-contrib-python 库
 
@@ -81,7 +81,7 @@ classes_list ：我们将所有的类别写进来，并
 
 
 
-![1608462055629](Auto_maker_readme\2.png)
+![1608462055629](Auto_maker_readme/2.png)
 
 影像分类中，使用简单的固定ROI方式，在运行maker_classification.py 后我们可以轻松地按下s键保存图片~图片就会根据main中的类别名称保存到data/train/类别名/下面，如果是测试集，就在main中修改为test模式
 
@@ -104,13 +104,13 @@ parser.add_argument('--train_test', type=str, default='test', help='train/test')
 
 github：https://github.com/CVUsers/Auto_maker
 
-![1608466712852](Auto_maker_readme\3.png)
+![1608466712852](Auto_maker_readme/3.png)
 
 github图片
 
 
 
-![1608466791841](Auto_maker_readme\demo1.png)
+![1608466791841](Auto_maker_readme/demo1.png)
 
  																	数据标注部分
 
@@ -118,21 +118,21 @@ github图片
 
 
 
-![1608467114587](Auto_maker_readme\demo2.png)
+![1608467114587](Auto_maker_readme/demo2.png)
 
 ​																				自动标注过程
 
 
 
-![1608467265739](Auto_maker_readme\4.png)
+![1608467265739](Auto_maker_readme/4.png)
 
 ​																							数据效果图	
 
-![1608467331409](Auto_maker_readme\5.png)
+![1608467331409](Auto_maker_readme/5.png)
 
 ​																				标注文件集
 
-![1608467378947](Auto_maker_readme\6.png)
+![1608467378947](Auto_maker_readme/6.png)
 
 ### 训练出来的目标检测模型演示
 
@@ -146,9 +146,9 @@ github图片
 
 模型已放在github上，轻量级模型，这两天会更新更高精度模型~
 
-![1608467536580](Auto_maker_readme\9.png)
+![1608467536580](Auto_maker_readme/9.png)
 
-![1608467558431](Auto_maker_readme\8.png)
+![1608467558431](Auto_maker_readme/8.png)
 
 ## 一键训练YOLOv3 YOLOv4 YOLOv5 方法
 
@@ -309,7 +309,7 @@ names: ['UsingPhone', 'LikePhone']
 
 
 
-![1608469384253](Auto_maker_readme\10.png)
+![1608469384253](Auto_maker_readme/10.png)
 
 mAP和precision 和recall 如下，我的模型只训练了70次~ 我接下来会使用4w张图片训练完，来查看准确率，并且实际体验效果，然后我会放在我的github和公众号：70次效果也不错~
 
@@ -317,7 +317,7 @@ mAP和precision 和recall 如下，我的模型只训练了70次~ 我接下来�
 
 这是损失~
 
-![1608469481705](Auto_maker_readme\11.png)
+![1608469481705](Auto_maker_readme/11.png)
 
 ### 检测
 
@@ -956,7 +956,7 @@ if __name__ == '__main__':
 
  效果图：
 
-![1608470893189](Auto_maker_readme\12.png)
+![1608470893189](Auto_maker_readme/12.png)
 
 ## 模型导出部分
 
@@ -1055,7 +1055,7 @@ github：https://github.com/CVUsers/Auto_maker
 **公众号：DeepAi 视界**
 
 二维码：
-![1608470893189](Auto_maker_readme\13.jpg)
+![1608470893189](Auto_maker_readme/13.jpg)
 
 
 
